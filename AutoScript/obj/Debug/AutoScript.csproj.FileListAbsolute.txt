@@ -1,0 +1,10 @@
+D:\#programs\c#.AutoScript\AutoScript\AutoScript\bin\Debug\AutoScript.exe.config
+D:\#programs\c#.AutoScript\AutoScript\AutoScript\bin\Debug\AutoScript.exe
+D:\#programs\c#.AutoScript\AutoScript\AutoScript\bin\Debug\AutoScript.pdb
+D:\#programs\c#.AutoScript\AutoScript\AutoScript\obj\Debug\AutoScript.csprojResolveAssemblyReference.cache
+D:\#programs\c#.AutoScript\AutoScript\AutoScript\obj\Debug\AutoScript.Properties.Resources.resources
+D:\#programs\c#.AutoScript\AutoScript\AutoScript\obj\Debug\AutoScript.csproj.GenerateResource.Cache
+D:\#programs\c#.AutoScript\AutoScript\AutoScript\obj\Debug\AutoScript.exe
+D:\#programs\c#.AutoScript\AutoScript\AutoScript\obj\Debug\AutoScript.pdb
+D:\#programs\c#.AutoScript\AutoScript\AutoScript\bin\Debug\Ifns.txt
+D:\#programs\c#.AutoScript\AutoScript\AutoScript\obj\Debug\AutoScript.MainForm.resources
