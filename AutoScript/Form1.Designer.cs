@@ -37,6 +37,11 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panelInterval = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelShedule = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.checkBoxShedule = new System.Windows.Forms.CheckBox();
             this.checkBoxQuote = new System.Windows.Forms.CheckBox();
             this.numericUpDownIntervalMin = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,23 +63,24 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.splitter2 = new System.Windows.Forms.Splitter();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonBack = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.listBoxLog = new System.Windows.Forms.ListBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.labelResult = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.buttonBack = new System.Windows.Forms.Button();
+            this.timerShedule = new System.Windows.Forms.Timer(this.components);
             this.contextMenuStripIfns.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panelInterval.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownIntervalMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownIntervalCount)).BeginInit();
             this.panelButton1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStripIfns
@@ -115,7 +121,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(530, 517);
+            this.tabControl1.Size = new System.Drawing.Size(530, 611);
             this.tabControl1.TabIndex = 6;
             // 
             // tabPage1
@@ -128,7 +134,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(522, 491);
+            this.tabPage1.Size = new System.Drawing.Size(522, 585);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Параметры";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -136,16 +142,66 @@
             // panelInterval
             // 
             this.panelInterval.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelInterval.Controls.Add(this.groupBox1);
             this.panelInterval.Controls.Add(this.checkBoxQuote);
             this.panelInterval.Controls.Add(this.numericUpDownIntervalMin);
             this.panelInterval.Controls.Add(this.label2);
             this.panelInterval.Controls.Add(this.numericUpDownIntervalCount);
             this.panelInterval.Controls.Add(this.label1);
             this.panelInterval.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelInterval.Location = new System.Drawing.Point(3, 350);
+            this.panelInterval.Location = new System.Drawing.Point(3, 384);
             this.panelInterval.Name = "panelInterval";
-            this.panelInterval.Size = new System.Drawing.Size(516, 91);
+            this.panelInterval.Size = new System.Drawing.Size(516, 151);
             this.panelInterval.TabIndex = 10;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.labelShedule);
+            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.checkBoxShedule);
+            this.groupBox1.Location = new System.Drawing.Point(267, 10);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(236, 120);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Отложить запуск";
+            // 
+            // labelShedule
+            // 
+            this.labelShedule.AutoSize = true;
+            this.labelShedule.Location = new System.Drawing.Point(15, 68);
+            this.labelShedule.Name = "labelShedule";
+            this.labelShedule.Size = new System.Drawing.Size(10, 13);
+            this.labelShedule.TabIndex = 9;
+            this.labelShedule.Text = "-";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker2.Location = new System.Drawing.Point(155, 41);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.ShowUpDown = true;
+            this.dateTimePicker2.Size = new System.Drawing.Size(75, 20);
+            this.dateTimePicker2.TabIndex = 8;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(15, 41);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(137, 20);
+            this.dateTimePicker1.TabIndex = 7;
+            // 
+            // checkBoxShedule
+            // 
+            this.checkBoxShedule.AutoSize = true;
+            this.checkBoxShedule.Location = new System.Drawing.Point(15, 22);
+            this.checkBoxShedule.Name = "checkBoxShedule";
+            this.checkBoxShedule.Size = new System.Drawing.Size(75, 17);
+            this.checkBoxShedule.TabIndex = 6;
+            this.checkBoxShedule.Text = "Включить";
+            this.checkBoxShedule.UseVisualStyleBackColor = true;
+            this.checkBoxShedule.CheckedChanged += new System.EventHandler(this.checkBoxShedule_CheckedChanged);
             // 
             // checkBoxQuote
             // 
@@ -213,7 +269,7 @@
             this.panelButton1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelButton1.Controls.Add(this.buttonStart);
             this.panelButton1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelButton1.Location = new System.Drawing.Point(3, 441);
+            this.panelButton1.Location = new System.Drawing.Point(3, 535);
             this.panelButton1.Name = "panelButton1";
             this.panelButton1.Size = new System.Drawing.Size(516, 47);
             this.panelButton1.TabIndex = 8;
@@ -240,7 +296,7 @@
             this.listViewScripts.GridLines = true;
             this.listViewScripts.Location = new System.Drawing.Point(3, 195);
             this.listViewScripts.Name = "listViewScripts";
-            this.listViewScripts.Size = new System.Drawing.Size(516, 293);
+            this.listViewScripts.Size = new System.Drawing.Size(516, 387);
             this.listViewScripts.TabIndex = 4;
             this.listViewScripts.UseCompatibleStateImageBehavior = false;
             this.listViewScripts.View = System.Windows.Forms.View.Details;
@@ -285,14 +341,14 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.listViewResult);
             this.tabPage2.Controls.Add(this.splitter2);
             this.tabPage2.Controls.Add(this.panel2);
-            this.tabPage2.Controls.Add(this.listViewResult);
             this.tabPage2.Controls.Add(this.panel1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(522, 491);
+            this.tabPage2.Size = new System.Drawing.Size(522, 585);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Результаты";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -308,7 +364,7 @@
             this.listViewResult.GridLines = true;
             this.listViewResult.Location = new System.Drawing.Point(3, 3);
             this.listViewResult.Name = "listViewResult";
-            this.listViewResult.Size = new System.Drawing.Size(516, 438);
+            this.listViewResult.Size = new System.Drawing.Size(516, 352);
             this.listViewResult.SmallImageList = this.imageList1;
             this.listViewResult.TabIndex = 15;
             this.listViewResult.UseCompatibleStateImageBehavior = false;
@@ -322,7 +378,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Скрипт";
-            this.columnHeader2.Width = 150;
+            this.columnHeader2.Width = 139;
             // 
             // columnHeader3
             // 
@@ -342,40 +398,18 @@
             // splitter2
             // 
             this.splitter2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitter2.Location = new System.Drawing.Point(3, 261);
+            this.splitter2.Location = new System.Drawing.Point(3, 355);
             this.splitter2.Name = "splitter2";
             this.splitter2.Size = new System.Drawing.Size(516, 5);
             this.splitter2.TabIndex = 14;
             this.splitter2.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.labelResult);
-            this.panel1.Controls.Add(this.buttonBack);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 441);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(516, 47);
-            this.panel1.TabIndex = 10;
-            // 
-            // buttonBack
-            // 
-            this.buttonBack.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.buttonBack.Location = new System.Drawing.Point(382, 13);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(121, 23);
-            this.buttonBack.TabIndex = 4;
-            this.buttonBack.Text = "Назад";
-            this.buttonBack.UseVisualStyleBackColor = true;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.progressBar1);
             this.panel2.Controls.Add(this.listBoxLog);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(3, 266);
+            this.panel2.Location = new System.Drawing.Point(3, 360);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(516, 175);
             this.panel2.TabIndex = 16;
@@ -398,6 +432,17 @@
             this.listBoxLog.Size = new System.Drawing.Size(516, 175);
             this.listBoxLog.TabIndex = 14;
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.labelResult);
+            this.panel1.Controls.Add(this.buttonBack);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(3, 535);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(516, 47);
+            this.panel1.TabIndex = 10;
+            // 
             // labelResult
             // 
             this.labelResult.AutoSize = true;
@@ -407,11 +452,26 @@
             this.labelResult.TabIndex = 5;
             this.labelResult.Text = "-";
             // 
+            // buttonBack
+            // 
+            this.buttonBack.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonBack.Location = new System.Drawing.Point(382, 13);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(121, 23);
+            this.buttonBack.TabIndex = 4;
+            this.buttonBack.Text = "Назад";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
+            // timerShedule
+            // 
+            this.timerShedule.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(530, 517);
+            this.ClientSize = new System.Drawing.Size(530, 611);
             this.Controls.Add(this.tabControl1);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -421,13 +481,15 @@
             this.tabPage1.ResumeLayout(false);
             this.panelInterval.ResumeLayout(false);
             this.panelInterval.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownIntervalMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownIntervalCount)).EndInit();
             this.panelButton1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -468,7 +530,12 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.ListBox listBoxLog;
         private System.Windows.Forms.Label labelResult;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timerShedule;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.CheckBox checkBoxShedule;
+        private System.Windows.Forms.Label labelShedule;
     }
 }
 

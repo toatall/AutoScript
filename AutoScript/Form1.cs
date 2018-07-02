@@ -35,6 +35,8 @@ namespace AutoScript
         private int _countThread = 0;
         private int _countErrorInterval = 1;
         private int _countErrorIntervalMin = 10;
+        private bool _useTimeDeferred = false;
+        private DateTime _datetimeDeffered = new DateTime();
 
         // статусы результатов (изображения)
         const byte IMAGE_STATUS_ERROR = 0; 
@@ -112,6 +114,14 @@ namespace AutoScript
             }
             progressBar1.Maximum = _countThread = allChecked;
             buttonStart.Enabled = false;
+
+            if (checkBoxShedule.Checked)
+            {
+                _datetimeDeffered = dateTimePicker1.Value.Date + dateTimePicker2.Value.TimeOfDay;
+                //MessageBox.Show((dateTimePicker1.Value.Date + dateTimePicker2.Value.TimeOfDay).ToString());
+                timerShedule.Enabled = true;
+                return;
+            }
 
             // переход на другую вкладку, где выполняется поиск
             tabControl1.SelectedIndex = 1;
@@ -201,7 +211,7 @@ namespace AutoScript
             // выполнение скрипта, в случае успешного выполнения 
             for (int i = 0; i < _countErrorInterval; i++)
             {
-                                  
+                flagErrorSQL = false;
                 try
                 {
                     setStatusListResult(scriptCurrent.Tag, "Выполняется....", IMAGE_STATUS_PROCESS);
@@ -445,6 +455,41 @@ namespace AutoScript
         {
             // переход на главную вкладку
             tabControl1.SelectedIndex = 0;
+        }
+
+        /// <summary>
+        /// Работа таймера
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (DateTime.Now >= _datetimeDeffered)
+            {
+                _useTimeDeferred = false;
+                checkBoxShedule.Checked = false;
+                labelShedule.Text = "-";
+                buttonStart.PerformClick();
+            }
+            else
+            {               
+                labelShedule.Text = "Осталось: " + (_datetimeDeffered - DateTime.Now).ToString();
+            }
+        }
+
+        /// <summary>
+        /// Event click ckeckBox shedule
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void checkBoxShedule_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!(sender as CheckBox).Checked)
+            {
+                timerShedule.Enabled = false;
+                labelShedule.Text = "-";
+                buttonStart.Enabled = true;
+            }
         }
 
         

@@ -50,12 +50,11 @@ namespace AutoScript.Model
         /// <summary>
         /// Выполнение запроса
         /// </summary>
-        /// <param name="script"></param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2100:Проверка запросов SQL на уязвимости безопасности")]
+        /// <param name="script"></param>        
         public bool RunSQL(string script, IExport export)
         {            
-            for (int iTry = 1; iTry <= _countTry; iTry++)
-            {
+            /*for (int iTry = 1; iTry <= _countTry; iTry++)
+            {*/
                 try
                 {
                     SqlCommand sqlCommand = new SqlCommand(script, _connection);  
@@ -89,16 +88,12 @@ namespace AutoScript.Model
 
                     return true;
 
-                }
-                catch (SqlException ex)
-                {
-                    _lastError = ex;                    
-                }
+                }                
                 catch (Exception ex)
                 {
                     _lastError = ex;                    
                 }
-            }
+            //}
             return false;
         }
 
