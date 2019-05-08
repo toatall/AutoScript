@@ -18,3 +18,13 @@ D:\!programs\c#.AutoScript\AutoScript\AutoScript\obj\Debug\AutoScript.csprojReso
 D:\!programs\c#.AutoScript\AutoScript\AutoScript\obj\Debug\AutoScript.MainForm.resources
 D:\!programs\c#.AutoScript\AutoScript\AutoScript\obj\Debug\AutoScript.Properties.Resources.resources
 D:\!programs\c#.AutoScript\AutoScript\AutoScript\obj\Debug\AutoScript.csproj.GenerateResource.Cache
+D:\repos\c_sharp\AutoScript\AutoScript\AutoScript\bin\Debug\AutoScript.exe.config
+D:\repos\c_sharp\AutoScript\AutoScript\AutoScript\obj\Debug\AutoScript.exe
+D:\repos\c_sharp\AutoScript\AutoScript\AutoScript\obj\Debug\AutoScript.pdb
+D:\repos\c_sharp\AutoScript\AutoScript\AutoScript\bin\Debug\Ifns.txt
+D:\repos\c_sharp\AutoScript\AutoScript\AutoScript\bin\Debug\AutoScript.exe
+D:\repos\c_sharp\AutoScript\AutoScript\AutoScript\bin\Debug\AutoScript.pdb
+D:\repos\c_sharp\AutoScript\AutoScript\AutoScript\obj\Debug\AutoScript.csprojResolveAssemblyReference.cache
+D:\repos\c_sharp\AutoScript\AutoScript\AutoScript\obj\Debug\AutoScript.MainForm.resources
+D:\repos\c_sharp\AutoScript\AutoScript\AutoScript\obj\Debug\AutoScript.Properties.Resources.resources
+D:\repos\c_sharp\AutoScript\AutoScript\AutoScript\obj\Debug\AutoScript.csproj.GenerateResource.Cache

@@ -126,11 +126,11 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.panelInterval);
-            this.tabPage1.Controls.Add(this.splitter1);
-            this.tabPage1.Controls.Add(this.panelButton1);
             this.tabPage1.Controls.Add(this.listViewScripts);
+            this.tabPage1.Controls.Add(this.splitter1);
             this.tabPage1.Controls.Add(this.listViewIfns);
+            this.tabPage1.Controls.Add(this.panelInterval);
+            this.tabPage1.Controls.Add(this.panelButton1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -149,9 +149,9 @@
             this.panelInterval.Controls.Add(this.numericUpDownIntervalCount);
             this.panelInterval.Controls.Add(this.label1);
             this.panelInterval.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelInterval.Location = new System.Drawing.Point(3, 384);
+            this.panelInterval.Location = new System.Drawing.Point(3, 411);
             this.panelInterval.Name = "panelInterval";
-            this.panelInterval.Size = new System.Drawing.Size(516, 151);
+            this.panelInterval.Size = new System.Drawing.Size(516, 124);
             this.panelInterval.TabIndex = 10;
             // 
             // groupBox1
@@ -162,7 +162,7 @@
             this.groupBox1.Controls.Add(this.checkBoxShedule);
             this.groupBox1.Location = new System.Drawing.Point(267, 10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(236, 120);
+            this.groupBox1.Size = new System.Drawing.Size(236, 100);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Отложить запуск";
@@ -294,9 +294,9 @@
             this.listViewScripts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewScripts.FullRowSelect = true;
             this.listViewScripts.GridLines = true;
-            this.listViewScripts.Location = new System.Drawing.Point(3, 195);
+            this.listViewScripts.Location = new System.Drawing.Point(3, 200);
             this.listViewScripts.Name = "listViewScripts";
-            this.listViewScripts.Size = new System.Drawing.Size(516, 387);
+            this.listViewScripts.Size = new System.Drawing.Size(516, 211);
             this.listViewScripts.TabIndex = 4;
             this.listViewScripts.UseCompatibleStateImageBehavior = false;
             this.listViewScripts.View = System.Windows.Forms.View.Details;
